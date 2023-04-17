@@ -4,10 +4,10 @@ spring:
   cloud:
     alicloud:
       oss:
-        endpoint: oss-cn-shenzhen.aliyuncs.com
+        endpoint: 
         bucket: lanan-gulimall
-      access-key: LTAI5t7oG3Z9UZJMDZ5jSWth
-      secret-key: 815pOvF3qRykW5vdzN4fIBZ7CGv3gy
+      access-key: 
+      secret-key: 
     nacos:
       discovery:
         group: dev
