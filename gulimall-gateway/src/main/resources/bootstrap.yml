@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 1252ca15-4805-4ac5-8a2f-6e4f71b2aa19
+        group: dev
+        # 多配置文件
+        extension-configs:
+          - dataId: other.yaml
+            group: dev
+            refresh: true
+          - dataId: spring.yaml
+            group: dev
+            refresh: true
+

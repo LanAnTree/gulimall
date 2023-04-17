@@ -1,0 +1,46 @@
+server:
+  port: 10000
+
+spring:
+  # 服务名
+  application:
+    name: gulimall-search
+  # springCloud 配置
+  cloud:
+    nacos:
+      discovery:
+        # springCloud alibaba nacos 注册地址
+        server-addr: 127.0.0.1:8848
+  sentinel:
+    transport:
+      #配置sentinel dashboard地址
+      dashboard: localhost:11000
+
+  redis:
+    host: 120.78.12.14
+    port: 6379
+
+#开启feign对sentinel的支持
+feign:
+  sentinel:
+    enabled: true
+
+  thymeleaf:
+    cache: false
+
+  session:
+    store-type: redis
+
+logging:
+  level:
+    com.xunqi.gulimall.search: debug
+    root: warn
+  pattern:
+    console: "%d{yyyy-MM-dd} [%thread] - %msg%n"
+
+#暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

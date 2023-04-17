@@ -1,0 +1,25 @@
+spring:
+  application:
+      name: gulimall-ware
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 005ffb24-ea76-4ee0-bb0f-40e6cd05a13a
+        # 多配置文件
+        extension-configs:
+          - dataId: datasource.yaml
+            group: dev
+            refresh: true
+          - dataId: mybatis.yaml
+            group: dev
+            refresh: true
+          - dataId: other.yaml
+            group: dev
+            refresh: true
+          - dataId: spring.yaml
+            group: dev
+            refresh: true
+        group: dev
+

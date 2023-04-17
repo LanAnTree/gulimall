@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: gulimall-third-party
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 11828dac-f69e-467a-b863-85eef237f711
+        # 多配置文件
+        extension-configs:
+          - dataId: other.yaml
+            group: dev
+            refresh: true
+          - dataId: spring.yaml
+            group: dev
+            refresh: true
+          - dataId: oss.yaml
+            group: dev
+            refresh: true
+        group: dev
+
